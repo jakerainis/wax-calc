@@ -13,9 +13,12 @@ interface InputProps {
 
 const Input: FunctionComponent<InputProps> = ({ defaultValue, label, id, getValues, register }) => {
   return (
-    <div>
-      <label htmlFor={id}>{label}</label>
-      <input defaultValue={defaultValue} id={id} type="number" {...register(id)} /> ({parseFloat(getValues(id)) / 16}lb)
+    <div className="mb-4">
+      <label className="block font-bold" htmlFor={id}>
+        {label}
+      </label>
+      <input className="p-1 border-2 border-black rounded-sm" defaultValue={defaultValue} id={id} type="number" {...register(id)} /> (
+      {parseFloat(getValues(id)) / 16}lb)
     </div>
   )
 }
