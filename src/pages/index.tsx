@@ -22,8 +22,8 @@ const Home: FunctionComponent = () => {
         <link href="/favicon.ico" rel="icon" />
       </Head>
 
-      <main className="max-w-md mx-auto mt-4">
-        <h1 className="mb-4 text-3xl font-semibold text-center">Fragrance Load Calculator</h1>
+      <main className="max-w-md p-4 mx-auto mt-4">
+        <h1 className="mb-4 text-2xl font-semibold text-center">Fragrance Load Calculator</h1>
         <form onChange={handleSubmit(calculate)}>
           <Input defaultValue={10} getValues={getValues} id={LOAD} label="Desired Load (%)" register={register} />
           <Input defaultValue={1} getValues={getValues} id={WAX} label="Wax Used (oz)" register={register} />
